@@ -11,3 +11,8 @@ class DiskspaceTest(unittest.TestCase):
         self.path = '/home/teste'
         self.largest_size = 6
         self.total_size = 4
+
+    def bytes_to_readable_test(self):
+        blocks = 224
+        result = "112.00Kb"
+        self.assertEqual(bytes_to_readable(blocks), result)

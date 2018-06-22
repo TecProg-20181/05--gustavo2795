@@ -1,6 +1,7 @@
 import unittest
+import subprocess
 
-from diskspace import *
+from diskspace import bytes_to_readable, print_tree, show_space_list,subprocess_check_output
 
 class DiskspaceTest(unittest.TestCase):
     
@@ -35,3 +36,6 @@ class DiskspaceTest(unittest.TestCase):
     def calculate_percentage_test(self):
         percentage = calculate_percentage(self.file_tree_node, self.total_size)
         self.assertTrue(percentage == 100)
+
+if __name__ == '__main__':
+    unittest.main()

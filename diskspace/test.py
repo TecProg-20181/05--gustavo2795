@@ -31,3 +31,7 @@ class DiskspaceTest(unittest.TestCase):
         result = "2.00Kb  100%  /home/teste\n"
         sys.stdout = sys.__stdout__
         self.assertEqual(result, cap.getvalue())
+
+    def calculate_percentage_test(self):
+        percentage = calculate_percentage(self.file_tree_node, self.total_size)
+        self.assertTrue(percentage == 100)
